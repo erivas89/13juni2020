@@ -88,6 +88,7 @@
         <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
         <form name="sentMessage" id="contactForm" novalidate>
     <h3 style="text-align: center;">Klart ni vill komma!    <i class="fa fa-heart"></i></h3>
+    <form id ="contact-form" name="contact-form" action="mail/osa.php" method="POST"  onsubmit="return validateForm()" >
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -171,6 +172,11 @@
             <button type="submit" class="btn btn-primary" id="sendMessageButton">Skicka</button>
           </div>
         </form>
+
+         <div class="center-on-small-only">
+                        <a class="btn btn-primary" onclick="validateForm()">Send</a>
+                    </div> <div class="status" id="status"></div>
+                </div>
       </div>
     </div>
   </div>
