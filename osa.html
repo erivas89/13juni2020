@@ -92,7 +92,7 @@
 
         <!-- Form -->
 
-<form id="contact-form" method="post" action="contact.php" role="form">
+<form id="contact-form" method="post" action="mail/contact.php" role="form">
 
     <div class="messages"></div>
 
@@ -161,6 +161,17 @@
 
 
         <!-- End form -->
+
+        <!-- form 2 -->
+
+          <form action="send_email.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="text" name="mail" placeholder="Your e-mail">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit" name="submit">Send e-mail</button>
+    </form>
+    <!--form-->
 
 </div>
       
