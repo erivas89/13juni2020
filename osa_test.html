@@ -78,7 +78,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                <h3 align="center">Fyll i info här</h3>
                <br>
-               <form id="contact-form" form action="mail/registration.php" method="post">
+               <form id="contact-form" form action="send_email.php" method="post">
                   <div class="messages"></div>
                   <div class="controls">
                      <div class="row">
@@ -172,7 +172,7 @@
             </div>
             </form>
             <!-- Form -->
-            <!--
+            
                <form id="contact-form" method="post" action="mail/contact.php" role="form">
                
                    <div class="messages"></div>
@@ -239,17 +239,18 @@
                    </div>
                
                </form>
-               -->
+              
             <!-- End form -->
             <!-- form 2 example -->
-            <!--
-               <form action="send_email.php" method="POST">
-                 <input type="text" name="name" placeholder="Full Name">
-                 <input type="text" name="mail" placeholder="Your e-mail">
-                 <input type="text" name="subject" placeholder="Subject">
-                 <textarea name="message" placeholder="Message"></textarea>
-                 <button type="submit" name="submit">Send e-mail</button>
-               </form>
+          <form action="send_email.php" method="post">
+First Name: <input type="text" name="first_name"><br>
+Last Name: <input type="text" name="last_name"><br>
+Email: <input type="text" name="email"><br>
+Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+
+</form>
                <!--form-->
          </div>
       </div>

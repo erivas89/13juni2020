@@ -9,26 +9,8 @@ $port = "465";
 $username = 'erika.vastberg@gmail.com';
 $password = 'Dinmamaborkel92';
 
-
-$name = $_POST['name'];
-$yesno = $_POST['yesno'];
-$guest = $_POST['guest'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$food = $_POST['food'];
-
-
-$subject = "Här kommer anmälan från $name";
-
-
-$body = "Namn: $name \n Jag kommer: $yesno \n Gästens namn: $guest \n E-post: $email \n Telefon: $phone \n Specialkost: $food";
-
-
-
-
-
-
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
+$subject = "test";
+$body = "test";
 
 $headers = array ('From' => $from, 'To' => $to,'Subject' => $subject);
 $smtp = Mail::factory('smtp',
@@ -43,7 +25,6 @@ $mail = $smtp->send($to, $headers, $body);
 if (PEAR::isError($mail)) {
 echo($mail->getMessage());
 } else {
-echo("Tack för ditt svar!\n");
+echo("Message successfully sent!\n");
 }
-
 ?>

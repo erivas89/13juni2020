@@ -9,7 +9,6 @@ $port = "465";
 $username = 'erika.vastberg@gmail.com';
 $password = 'Dinmamaborkel92';
 
-
 $name = $_POST['name'];
 $yesno = $_POST['yesno'];
 $guest = $_POST['guest'];

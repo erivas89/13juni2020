@@ -1,11 +1,4 @@
 <?php
-require_once "Mail.php";
-
-$host = "ssl://smtp.gmail.com";
-$port = "465";
-$username = 'erika.vastberg@gmail.com';
-$password = 'Dinmamaborkel92';
-
 /*
  *  CONFIGURE EVERYTHING HERE
  */
@@ -14,15 +7,10 @@ $password = 'Dinmamaborkel92';
 $from = 'Demo contact form <demo@domain.com>';
 
 // an email address that will receive the email with the output of the form
-$to = 'erika.vastberg@gmail.com';
+$sendTo = 'erika.vastberg@gmail.com';
 
 // subject of the email
 $subject = 'New message from contact form';
-
-//$body = "test";
-
-
-$headers = array ('From' => $from, 'To' => $to,'Subject' => $subject);
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
@@ -34,29 +22,12 @@ $okMessage = 'Contact form successfully submitted. Thank you, I will get back to
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
 
-//$body = implode("\n", $fields);
-
-$smtp = Mail::factory('smtp',
-array ('host' => $host,
-'port' => $port,
-'auth' => true,
-'username' => $username,
-'password' => $password));
-
-//$mail = $smtp->send($to, $headers, $body);
-
-//if (PEAR::isError($mail)) {
-//echo($mail->getMessage());
-//} else {
-//echo("Message successfully sent!\n");
-//}
-
 /*
  *  LET'S DO THE SENDING
  */
 
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE);
 
 try
 {
